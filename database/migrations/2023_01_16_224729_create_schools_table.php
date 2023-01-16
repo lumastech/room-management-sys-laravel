@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('schools', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('image_1');
+            $table->string('name');
+            $table->string('location');
+            $table->string('area');
+            $table->string('town');
             $table->timestamps();
         });
     }

@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('likes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('house_id');
+            $table->string('type', 20);
             $table->timestamps();
         });
     }
