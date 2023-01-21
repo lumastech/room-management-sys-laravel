@@ -16,7 +16,7 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('Home', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
         'laravelVersion' => Application::VERSION,
@@ -31,7 +31,41 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Dashboard');
-    })->name('dashboard'); 
+    })->name('dashboard');
 });
+
+// home
+
+
+// about
+Route::get('/about', function (){
+    return Inertia::render('About');
+});
+
+Route::get('/houses', function (){
+    return Inertia::render('Houses');
+});
+
+Route::get('/house', function (){
+    return Inertia::render('House');
+});
+
+
+// house
+
+
+//ratings
+
+
+//comments
+
+
+//likes
+
+
+//schools
+
+
+
 
 

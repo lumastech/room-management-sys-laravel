@@ -26,6 +26,9 @@ return new class extends Migration
                         ->after('two_factor_recovery_codes')
                         ->nullable();
             }
+
+            $table->string('status', 20)->default('active');
+            $table->string('type')->default('user');
         });
     }
 
