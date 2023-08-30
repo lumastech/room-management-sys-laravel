@@ -11,6 +11,7 @@ import TextInput from '@/Components/TextInput.vue';
 const form = useForm({
     name: '',
     email: '',
+    type: '',
     password: '',
     password_confirmation: '',
     terms: false,
@@ -56,6 +57,15 @@ const submit = () => {
                     required
                 />
                 <InputError class="mt-2" :message="form.errors.email" />
+            </div>
+            <div class="mt-4">
+                <InputLabel for="type" value="Register as" />
+                <select v-model="form.type" class="rounded-md border border-gray-300 shadow-sm block w-full mt-2 focus:border focus:border-teal-500 focus:ring focus:ring-teal-500/50">
+                    <option value="user" selected>User</option>
+                    <option value="vendor">Landlord/Landlady</option>
+                    <option value="vendor">Agent</option>
+                </select>
+                <InputError class="mt-2" :message="form.errors.name" />
             </div>
 
             <div class="mt-4">

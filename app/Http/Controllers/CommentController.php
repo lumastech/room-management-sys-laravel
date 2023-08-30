@@ -1,9 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Http\Requests\StoreCommentRequest;
-use App\Http\Requests\UpdateCommentRequest;
+use Illuminate\Http\Request;
 use App\Models\Comment;
 
 class CommentController extends Controller
@@ -34,9 +32,17 @@ class CommentController extends Controller
      * @param  \App\Http\Requests\StoreCommentRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreCommentRequest $request)
-    {
-        //
+    public function store(Request $request){
+        $comment = $request->validate([
+            'comment' => 'required|string',
+            'house_id' => 'required|numeric',
+        ]);
+
+        $comment['user_id'] = $request->user()->id;
+        $comment['status'] = 'active';
+
+        Comment::create($comment);
+        return back();
     }
 
     /**

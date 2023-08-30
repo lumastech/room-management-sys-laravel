@@ -7,14 +7,14 @@
         <title inertia>{{ config('app.name', 'RMS') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
+        <!-- <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.css"  rel="stylesheet" />
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/flowbite.min.js"></script> -->
 
         <!-- fa icons -->
-        <link rel="stylesheet" href="icons/icons.css">
-        <script src="icons/icons.js"></script>
+        <link rel="stylesheet" href="/icons/icons.css">
+        <script src="/icons/icons.js"></script>
 
 
         <!-- Scripts -->
