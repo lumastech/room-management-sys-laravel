@@ -1,0 +1,1 @@
+import{W as o}from"./WebLayout-239c61b0.js";import{_ as t}from"./_plugin-vue_export-helper-c27b6911.js";import{o as e,e as s}from"./app-f38dc963.js";import"./Topbar-6bd6e0a4.js";const r={layout:o},a={class:"text-2xl"};function c(n,p,_,m,u,f){return e(),s("h1",a,"About us")}const $=t(r,[["render",c]]);export{$ as default};
